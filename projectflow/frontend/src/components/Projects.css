@@ -1,0 +1,115 @@
+.projects-page {
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f7fbff;
+}
+
+.projects-page h1 {
+  color: #0d47a1;
+  margin-bottom: 20px;
+}
+
+.project-controls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.project-controls input,
+.project-controls select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 200px;
+  font-size: 1rem;
+}
+
+.project-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.project-card {
+  background: white;
+  border-left: 5px solid #1976d2;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+}
+
+.status.planning {
+  background: #9e9e9e;
+}
+.status.in-progress {
+  background: #1976d2;
+}
+.status.review {
+  background: #ff9800;
+}
+.status.completed {
+  background: #4caf50;
+}
+
+.deadline {
+  margin: 10px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.progress-bar {
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 8px;
+  margin-top: 8px;
+}
+
+.progress-fill {
+  height: 8px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 0.85rem;
+  text-align: right;
+  color: #1976d2;
+  margin-top: 4px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .project-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .project-controls input,
+  .project-controls select {
+    width: 100%;
+  }
+}
