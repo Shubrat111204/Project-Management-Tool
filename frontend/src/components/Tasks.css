@@ -1,0 +1,92 @@
+.tasks-page {
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f9ff;
+}
+
+.tasks-page h1 {
+  color: #0d47a1;
+  margin-bottom: 20px;
+}
+
+.task-controls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.task-controls input,
+.task-controls select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 220px;
+  font-size: 1rem;
+}
+
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.task-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 6px solid #1976d2;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-6px);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.task-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.priority {
+  padding: 4px 10px;
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.task-project,
+.task-assignee {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.task-assignee {
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .task-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .task-controls input,
+  .task-controls select {
+    width: 100%;
+  }
+
+  .task-grid {
+    grid-template-columns: 1fr;
+  }
+}
